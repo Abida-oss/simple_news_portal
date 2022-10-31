@@ -1,0 +1,33 @@
+.text-limit {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+.img-size{
+    width:80px;
+    height:60px;
+}
+.img{
+    width:50px;
+    height:20px;
+}
+
+@media (max-width:767px){
+    h5{
+        font-size:8px;
+    }
+    p{
+        font-size:10px;
+    }
+    h6{
+        font-size:14px;
+    }
+}
+
+.choose{
+    width:100px;
+    height:40px;
+}
+
