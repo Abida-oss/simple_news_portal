@@ -165,6 +165,24 @@ const loadArticleDetails = async news_id => {
 
 
 
+const displayArticleDetails = article => {
+  const modalTitle = document.getElementById('articleDetailsModalLabel');
+  modalTitle.innerText = article[0].title;
+
+  const modalDetails = document.getElementById('single');
+  modalDetails.innerHTML = `
+  <div class="m-3 d-flex">
+      <img src="${article[0].author.img}" class="rounded-circle  img-size img-fluid" alt="...">
+      <h6 class="card-title fw-bold m-3 mt-2">Author Name: ${article[0].author.name ? article[0].author.name : '<span class="text-info">Unknown</span>'}</h6>
+ 
+  </div> 
+  
+  <p> ${article[0].details}</p>
+
+  <h6 class="card-title fw-bold "><svg xmlns="http://www.w3.org/2000/svg" class="m-3" height="24px" viewBox="0 0 24 24" width="20px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>${article[0].total_view ? article[0].total_view : '<span class="text-info">No view</span>'} M</h6>`;
+}
+
+
 
 
 
